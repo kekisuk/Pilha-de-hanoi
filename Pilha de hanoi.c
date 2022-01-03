@@ -1,3 +1,7 @@
+/*
+    Autora: Francisca Kelen Ferreira dos Santos
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,8 +15,8 @@ typedef struct no{
 NO *topo = NULL;
 int tam = 0;
 
-/*  FunÁ„o adicionar que forma os nÛs da pilha.
-    Os nÛs v„o ser os "discos" da torre de hanÛi.
+/*  Fun√ß√£o adicionar que forma os n√≥s da pilha.
+    Os n√≥s v√£o ser os "discos" da torre de han√≥i.
 */
 void adicionar(int id){
 
@@ -23,7 +27,7 @@ void adicionar(int id){
     tam++;
 }
 
-/*  FunÁ„o que vai imprimir os nÛs da pilha.
+/*  Fun√ß√£o que vai imprimir os n√≥s da pilha.
     Imprimir um identificador a baixo do outro.
 */
 void imprimir(){
@@ -36,7 +40,7 @@ void imprimir(){
     }
 }
 
-/*  FunÁ„o que calcula a quantidade de movimentos
+/*  Fun√ß√£o que calcula a quantidade de movimentos
     para construir a torre de acordo com a quantidade de discos.
 */
 int hanoi(int discos){
@@ -50,19 +54,19 @@ int hanoi(int discos){
 
 }
 
-//FunÁ„o principal que recebe do usuario a quantidade de discos que quer na pilha
+//Fun√ß√£o principal que recebe do usuario a quantidade de discos que quer na pilha
 int main(void){
 
    int discos;
 
-    printf("Digite a quantidade de discos que vocÍ quer empilhar: ");
+    printf("Digite a quantidade de discos que voc√™ quer empilhar: ");
     scanf("%d", &discos);
 
-    for(int i=discos; i>=1; i--){ //ordenaÁ„o da pilha e chamada da funÁ„o adicionar
+    for(int i=discos; i>=1; i--){ //ordena√ß√£o da pilha e chamada da fun√ß√£o adicionar
         adicionar(i);
     }
-    imprimir(); //chamada da funÁ„o imprimir
+    imprimir(); //chamada da fun√ß√£o imprimir
 
-    printf("\n… necessario %d movimentos para se fazer essa torre com %d discos!\n", hanoi(discos), discos);
+    printf("\n√â necessario %d movimentos para se fazer essa torre com %d discos!\n", hanoi(discos), discos);
 
 }
